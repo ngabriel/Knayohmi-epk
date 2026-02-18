@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Knayohmi — EPK</title>
+  <meta name="description" content="Knayohmi (Naomi) — South London DJ. EPK, mixes, bio, press." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Optional: swap to any font you like -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <div class="brand">
+        <!-- Replace with your logo if you want 
+        <div class="brand-mark" aria-hidden="true"></div>-->
+        <div>
+          <div class="brand-name">KNAYOHMI</div>
+          <div class="brand-tag">South London DJ • House / Tech / Funk / Afro-Latin / Disco </div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#bio">Bio</a>
+        <a href="#mixes">Mixes</a>
+        <a href="#press">Press</a>
+        <a href="#contact" class="btn btn-ghost">Book</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h2>Keep it moving, keep it grooving.</h2>
+          <p class="lead">
+            Groove-led, soulful and techy sets rooted in funk, disco, and house —
+            built for connection, freedom, and letting go.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn" href="#mixes">Listen to latest mix</a>
+            <a class="btn" href="press-photos/press-photos.zip" download>
+              Download press photos (.zip)
+            </a>
+            <!-- <a class="btn btn-ghost" href="press-pack/Knayohmi-Press-Pack.pdf" download> 
+              Download press pack (PDF)
+            </a>-->
+          </div>
+
+          <div class="meta-row">
+            <span class="pill">London, UK</span>
+            <span class="pill">House / Disco / Afro-Latin Grooves</span>
+            <span class="pill">Residencies + bookings</span>
+          </div>
+        </div>
+
+        <div class="hero-media" aria-label="Artist image">
+          <!-- Replace with your image -->
+          <img src="assets/hero.jpg" alt="Knayohmi DJing" />
+        </div>
+      </div>
+    </section>
+
+    <!-- BIO -->
+    <section class="section" id="bio">
+      <div class="container">
+        <div class="section-head">
+          <h2>Bio</h2>
+          <p>Choose the version you need. Download as text in one click.</p>
+        </div>
+
+        <div class="card">
+          <div class="tabs" role="tablist" aria-label="Bio versions">
+            <button class="tab active" role="tab" aria-selected="true" data-bio="short">Short</button>
+            <button class="tab" role="tab" aria-selected="false" data-bio="long">Long</button>
+            <button class="tab" role="tab" aria-selected="false" data-bio="full">Full</button>
+          </div>
+
+          <div class="bio-body">
+            <div id="bioText" class="bio-text" aria-live="polite"></div>
+
+            <div class="bio-actions">
+              <button class="btn" id="downloadBioBtn">Download this bio (.txt)</button>
+              <a class="btn btn-ghost" href="bio/bio-full.txt" download>Download full bio (.txt)</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MIXES -->
+    <section class="section" id="mixes">
+      <div class="container">
+        <div class="section-head">
+          <h2>Latest mix</h2>
+          <!-- <p>Embed players here. Later we can auto-load your newest uploads.</p>-->
+        </div>
+        <div class="embed">
+          <iframe id="sc-player" title="SoundCloud playlist" width="100%" height="450" scrolling="no" frameborder="no"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/stickyjam-music-117763633/stickyjam-mix-vol-3-knayohmi">
+          </iframe>
+</div>
+</div>
+      </div>
+    </section>
+    
+
+    <!-- PRESS -->
+    <section class="section" id="press">
+      <div class="container">
+        <div class="section-head">
+          <h2>Press & highlights</h2>
+          <!-- <p>Sub heading.</p>-->
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Residencies</h3>
+            <ul class="list" id="residency-list">
+              
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Selected Appearances</h3>
+            <ul class="list" id="appearances-list">
+              <li>Pure House LDN — Brixton Jamm
+                - Headlined by Oliver Dollar</li>
+              <li>Rhythm Grooves Christmas Special — The Source Bar, Maidstone
+                - Headlined by Deep Fiktion</li>
+              <li>This Is My Culture — London
+                - Line-up featuring DJ Ritu</li>
+              <li>Party on the Prom — Colwyn Bay Beach
+                - Warm-up set for DJ Singh</li>
+            </ul>
+          </article>
+
+
+
+          <article class="card">
+            <h3>Downloads</h3>
+            <div class="stack">
+              <a class="btn" href="press-photos/press-photos.zip" download>
+                Download press photos (.zip)
+              </a>
+              <a class="btn" href="bio/bio-short.txt" download>Short bio (.txt)</a>
+              <a class="btn" href="bio/bio-long.txt" download>Long bio (.txt)</a>
+              <!-- <a class="btn btn-ghost" href="press-pack/Knayohmi-Press-Pack.pdf" download>Press pack (PDF)</a> -->
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+ <!-- VIDEO -->
+    <section class="section" id="video">
+      <div class="container">
+        <div class="section-head">
+          <h2>Video</h2>
+          <p>Live clips and showreel.</p>
+        </div>
+    
+        <article class="card">
+          <div class="video-embed">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/5llvu4fg8oE"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+    
+          <div class="stack" style="margin-top:12px;">
+            <a class="btn btn-ghost" href="https://youtu.be/5llvu4fg8oE" target="_blank" rel="noreferrer">
+              Watch on YouTube
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2>Booking</h2>
+          <p>Give me a message - I promise I won't bite!.</p>
+        </div>
+
+        <div class="card contact-card">
+          <div>
+            <div class="label">Email</div>
+            <a href="#" id="contact-email">loading...</a>
+          </div>
+
+          <div>
+            <div class="label">Social</div>
+            <div class="stack">
+              <a href="#" target="_blank" rel="noreferrer">Instagram</a>
+              <a href="#" target="_blank" rel="noreferrer">SoundCloud</a>
+              <!-- <a href="#" target="_blank" rel="noreferrer">RA</a>-->
+            </div>
+          </div>
+
+          <div class="right">
+            <a class="btn" href="#top">Back to top</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="muted">© <span id="year"></span> Knayohmi</div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script src="https://w.soundcloud.com/player/api.js"></script>
+  <script>
+    const iframe = document.getElementById('sc-player');
+    const widget = SC.Widget(iframe);
+
+    const prevBtn = document.getElementById("prevTrack");
+    const nextBtn = document.getElementById("nextTrack");
+
+    prevBtn.addEventListener("click", () => {
+      widget.prev();
+    });
+
+    nextBtn.addEventListener("click", () => {
+      widget.next();
+    });
+
+    //photo carousel
+    const track = document.getElementById("pressPhotoTrack");
+
+    if (track && typeof PRESS_PHOTOS !== "undefined") {
+      PRESS_PHOTOS.forEach(src => {
+        const link = document.createElement("a");
+        link.className = "carousel-item";
+        link.href = src;
+        link.download = "";
+
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = "Press photo";
+
+        link.appendChild(img);
+        track.appendChild(link);
+      });
+    }
+
+
+
+    (function initPressPhotoCarousel() {
+      const track = document.getElementById("pressPhotoTrack");
+      if (!track) return;
+
+      const carousel = track.closest(".photo-carousel");
+      const btnPrev = carousel.querySelector('.carousel-btn[data-dir="-1"]');
+      const btnNext = carousel.querySelector('.carousel-btn[data-dir="1"]');
+
+      let index = 0;
+
+      function itemsPerView() {
+        const w = window.innerWidth;
+        if (w <= 520) return 1;
+        if (w <= 820) return 2;
+        return 3;
+      }
+
+      function maxIndex() {
+        return Math.max(0, track.children.length - itemsPerView());
+      }
+
+      function itemStepPx() {
+        const first = track.querySelector(".carousel-item");
+        if (!first) return 0;
+        const itemWidth = first.getBoundingClientRect().width;
+        const gap = parseFloat(getComputedStyle(track).gap || "0");
+        return itemWidth + gap;
+      }
+
+      function update() {
+        const step = itemStepPx();
+        const max = maxIndex();
+        index = Math.min(Math.max(index, 0), max);
+
+        track.style.transform = `translateX(${-index * step}px)`;
+        btnPrev.disabled = (index === 0);
+        btnNext.disabled = (index === max);
+      }
+
+      btnPrev.addEventListener("click", () => { index--; update(); });
+      btnNext.addEventListener("click", () => { index++; update(); });
+      window.addEventListener("resize", update);
+
+      // ✅ Re-run layout when each thumbnail loads
+      track.querySelectorAll("img").forEach(img => {
+        if (img.complete) return;
+        img.addEventListener("load", update, { once: true });
+      });
+
+
+
+      //soundcloud scroll
+      btnPrev.addEventListener("click", () => move(-1));
+      btnNext.addEventListener("click", () => move(1));
+      window.addEventListener("resize", () => update());
+
+      // Nice touch: trackpad/shift-wheel horizontal scroll (optional)
+      carousel.querySelector(".carousel-viewport").addEventListener("wheel", (e) => {
+        if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return; // already horizontal
+        if (!e.shiftKey) return;
+        e.preventDefault();
+        move(e.deltaY > 0 ? 1 : -1);
+      }, { passive: false });
+
+      update();
+    })();
+  </script>
+
+</body>
+
+</html>

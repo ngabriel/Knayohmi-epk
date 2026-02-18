@@ -1,0 +1,46 @@
+{
+  "header": {
+    "artistName": " Test! KNAYOHMI",
+    "artistTag": "Test!South London DJ • House / Tech / Funk / Afro-Latin / Disco"
+  },
+  "hero": {
+    "title": "Test!Keep it moving, keep it grooving.",
+    "lead": "Test!Groove-led, soulful and techy sets rooted in funk, disco, and house — built for connection, freedom, and letting go.",
+    "pills": ["Test!London, UK", "House / Disco / Afro-Latin Grooves", "Residencies + bookings"]
+  },
+  "bio": {
+    "title": "Test!Bio",
+    "helpText": "Test!Choose the version you need. Download as text in one click.",
+    "versions": {
+      "short": "Test!Short bio text goes here...",
+      "long": "Test!Longer bio text goes here...",
+      "full": "Test!Full professional bio text goes here..."
+    }
+  },
+  "press": {
+    "sectionTitle": "Test!Press & highlights",
+    "residencyTitle": "Test!Residencies",
+    "residencies": [
+      "Test!STICKYJAM Music — South London Tech House Party",
+      "This Is My Culture — Queer Grassroots Rave"
+    ],
+    "appearancesTitle": "Test!Selected Appearances",
+    "appearances": [
+      "Test!Pure House LDN — Brixton Jamm - Headlined by Oliver Dollar",
+      "Test!Rhythm Grooves Christmas Special — The Source Bar",
+      "Test!This Is My Culture — London - Featuring DJ Ritu",
+      "Test!Party on the Prom — Colwyn Bay Beach"
+    ]
+  },
+  "video": {
+    "title": "Test!Video",
+    "helpText": "Test!Live clips and showreel."
+  },
+  "contact": {
+    "title": "Test!Booking",
+    "helpText": "Test!Give me a message - I promise I won't bite!",
+    "email": "Test!hello@naomigabriel.com",
+    "instagramUrl": "Test!https://instagram.com/knayohmi",
+    "soundcloudUrl": "Test!https://soundcloud.com/knayohmi"
+  }
+}

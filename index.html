@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EPK Websites — by Knayohmi (Naomi Gabriel)</title>
+  <meta name="description" content="Professional EPK websites for DJs & artists. Choose Starter or Pro. Live demos + quick setup." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0b0b0f;
+      --card:#12121a;
+      --text:#f5f5f7;
+      --muted:rgba(245,245,247,.72);
+      --line:rgba(245,245,247,.12);
+      --btn:#f5f5f7;
+      --btnText:#0b0b0f;
+      --ghost:transparent;
+      --radius:18px;
+      --max:1080px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:radial-gradient(900px 600px at 20% 0%, rgba(255,255,255,.08), transparent 60%),
+                 radial-gradient(900px 600px at 80% 0%, rgba(255,255,255,.06), transparent 60%),
+                 var(--bg);
+      color:var(--text);
+    }
+    a{color:inherit}
+    .container{max-width:var(--max); margin:0 auto; padding:24px}
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:20px 0;
+    }
+    .brand{
+      display:flex; gap:12px; align-items:center;
+    }
+    .mark{
+      width:38px; height:38px; border-radius:12px;
+      border:1px solid var(--line);
+      background:linear-gradient(135deg, rgba(245,245,247,.16), rgba(245,245,247,.03));
+    }
+    .brand h1{margin:0; font-size:14px; letter-spacing:.12em}
+    .brand p{margin:2px 0 0; font-size:12px; color:var(--muted)}
+    .nav{display:flex; gap:14px; align-items:center; flex-wrap:wrap}
+    .nav a{font-size:13px; color:var(--muted); text-decoration:none}
+    .nav a:hover{color:var(--text)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 14px; border-radius:14px; border:1px solid transparent;
+      background:var(--btn); color:var(--btnText);
+      font-weight:600; font-size:14px; text-decoration:none;
+      cursor:pointer;
+      white-space:nowrap;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn:active{transform:translateY(0)}
+    .btn-ghost{
+      background:var(--ghost); color:var(--text);
+      border:1px solid var(--line);
+    }
+    .hero{
+      padding:34px 0 18px;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+    }
+    .panel{
+      border:1px solid var(--line);
+      background:rgba(18,18,26,.85);
+      backdrop-filter: blur(10px);
+      border-radius:var(--radius);
+      padding:22px;
+    }
+    .headline{
+      font-size:38px; line-height:1.05; margin:0 0 12px;
+      letter-spacing:-0.02em;
+    }
+    @media (max-width:520px){
+      .headline{font-size:30px}
+    }
+    .lead{color:var(--muted); font-size:15px; line-height:1.6; margin:0 0 16px}
+    .actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+    .pills{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+    .pill{
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:8px 10px;
+      font-size:12px;
+      color:var(--muted);
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap:16px;
+      margin-top:18px;
+    }
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr}
+    }
+    .card{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:18px;
+      background:rgba(18,18,26,.75);
+    }
+    .card h3{margin:0 0 8px; font-size:18px}
+    .price{font-size:26px; font-weight:800; margin:8px 0 10px}
+    .small{font-size:12px; color:var(--muted); line-height:1.5}
+    ul{margin:10px 0 0 18px; color:var(--muted); line-height:1.6}
+    .twoBtns{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+    .section{
+      margin-top:18px;
+    }
+    .section h2{margin:0 0 8px; font-size:20px}
+    .divider{height:1px; background:var(--line); margin:18px 0}
+    .faq{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap:12px;
+    }
+    @media (max-width:900px){
+      .faq{grid-template-columns:1fr}
+    }
+    .faq .card h4{margin:0 0 6px; font-size:14px}
+    .footer{
+      margin:26px 0 10px;
+      color:var(--muted);
+      font-size:12px;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .note{
+      border:1px dashed rgba(245,245,247,.22);
+      border-radius:16px;
+      padding:12px 14px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.5;
+      background:rgba(18,18,26,.45);
+    }
+    .highlight{color:var(--text)}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="topbar">
+      <div class="brand">
+        <div class="mark" aria-hidden="true"></div>
+        <div>
+          <h1>EPK WEBSITES</h1>
+          <p>By Knayohmi (Naomi Gabriel)</p>
+        </div>
+      </div>
+
+      <div class="nav">
+        <a href="#packages">Packages</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact" class="btn btn-ghost">Contact</a>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="panel">
+        <h2 class="headline">EPK websites that make you look bookable.</h2>
+        <p class="lead">
+          A clean, promoter-friendly page with your bio, mixes, highlights and contact —
+          ready to send in one link. Choose Starter (set up for you) or Pro (done for you).
+        </p>
+
+        <div class="actions">
+          <a class="btn" href="#packages">See packages</a>
+          <a class="btn btn-ghost" href="demo-starter/" target="_self">Preview Starter demo</a>
+          <a class="btn btn-ghost" href="demo-pro/" target="_self">Preview Pro demo</a>
+        </div>
+
+        <div class="pills">
+          <span class="pill">DJs • Producers • AV artists</span>
+          <span class="pill">Mobile-friendly</span>
+          <span class="pill">Fast to share</span>
+          <span class="pill">No messy Linktree</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="note">
+          <div class="highlight" style="font-weight:700; margin-bottom:6px;">Quick how it works</div>
+          1) Pick Starter or Pro<br/>
+          2) Pay via Stripe/PayPal<br/>
+          3) You get a live EPK link + next steps<br/>
+          <span class="small">(Starter: you edit content using the guide. Pro: I build it for you.)</span>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="note">
+          <div class="highlight" style="font-weight:700; margin-bottom:6px;">Already bought Starter?</div>
+          You can upgrade to Pro anytime by paying the difference.
+        </div>
+      </div>
+    </div>
+
+    <!-- PACKAGES -->
+    <div class="section" id="packages">
+      <h2>Packages</h2>
+      <p class="lead" style="margin-top:0">
+        Same professional EPK outcome — two ways to get there.
+      </p>
+
+      <div class="grid">
+        <!-- STARTER -->
+        <div class="card">
+          <h3>EPK Starter</h3>
+          <div class="price">£149</div>
+          <div class="small"><strong>“I set it up. You fill it in.”</strong></div>
+
+          <ul>
+            <li>Your EPK set up and live on GitHub Pages</li>
+            <li>Your own shareable EPK link</li>
+            <li>Step-by-step guide to update text, photos and links</li>
+            <li>Press photos download as a link (zip or folder link)</li>
+          </ul>
+
+          <div class="twoBtns">
+            <a class="btn btn-ghost" href="demo-starter/">Preview Starter demo</a>
+            <!-- Replace href with your payment link -->
+            <a class="btn" href="#" id="buyStarter">Buy Starter</a>
+          </div>
+
+          <p class="small" style="margin-top:10px;">
+            Best if you’re happy to follow a guide to add your own content once it’s live.
+          </p>
+        </div>
+
+        <!-- PRO -->
+        <div class="card">
+          <h3>EPK Pro</h3>
+          <div class="price">£295</div>
+          <div class="small"><strong>“You send the content. I do the rest.”</strong></div>
+
+          <ul>
+            <li>Your EPK set up and live on GitHub Pages</li>
+            <li>I add your bio, photos, mixes and links for you</li>
+            <li>Press photos displayed neatly (thumbnails/gallery)</li>
+            <li>Colour tweaks to match your branding</li>
+            <li>Optional video/showreel section if you have one</li>
+            <li><strong>Includes 30 days of small tweaks</strong> after delivery</li>
+          </ul>
+
+          <div class="twoBtns">
+            <a class="btn btn-ghost" href="demo-pro/">Preview Pro demo</a>
+            <!-- Replace href with your payment link -->
+            <a class="btn" href="#" id="buyPro">Buy Pro</a>
+          </div>
+
+          <p class="small" style="margin-top:10px;">
+            Best if you want it polished and ready without touching anything technical.
+          </p>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- WHICH ONE -->
+      <div class="note">
+        <div class="highlight" style="font-weight:700; margin-bottom:6px;">Which one should I choose?</div>
+        Choose <strong>Starter</strong> if you’re happy to follow a simple guide and update your content yourself once everything is live.
+        Choose <strong>Pro</strong> if you’d rather send me your content and receive a finished EPK ready to share.
+      </div>
+
+      <!-- BOUNDARY -->
+      <div class="note" style="margin-top:12px;">
+        <div class="highlight" style="font-weight:700; margin-bottom:6px;">What’s not included</div>
+        Starter is designed to be self-editable using the guide provided. If you’d like me to add content, adjust styling, or make changes for you,
+        that’s covered in Pro or charged as an update.
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="section" id="about">
+      <h2>About</h2>
+      <div class="card">
+        <p class="lead" style="margin:0">
+          I’m Naomi (Knayohmi) — a South London DJ and audiovisual artist. I built these EPKs because I kept seeing talented artists lose bookings
+          with messy links, missing info, or pages that don’t work on mobile. This setup keeps everything a promoter needs in one clean link:
+          who you are, what you sound like, highlights, and how to book you.
+        </p>
+        <p class="small" style="margin:12px 0 0">
+          The aim: <strong>easy for you</strong>, <strong>easy for promoters</strong>, and a page that feels professional even if you’re independent.
+        </p>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="section" id="faq">
+      <h2>FAQ</h2>
+      <div class="faq">
+        <div class="card">
+          <h4>Can I use my own domain?</h4>
+          <div class="small">Yes. You buy the domain, I can connect it for <strong>£50</strong> (includes HTTPS).</div>
+        </div>
+        <div class="card">
+          <h4>Can I upgrade from Starter to Pro?</h4>
+          <div class="small">Yes — upgrade anytime by paying the difference.</div>
+        </div>
+        <div class="card">
+          <h4>Do I need to know GitHub?</h4>
+          <div class="small">No — Starter and Pro both include GitHub Pages setup.</div>
+        </div>
+        <div class="card">
+          <h4>What counts as “small tweaks” in Pro?</h4>
+          <div class="small">Minor text edits, link swaps, and a photo swap. Bigger changes are treated as an update.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="section" id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p class="lead" style="margin:0 0 10px;">
+          Questions or want to book a Pro build? Email me:
+        </p>
+        <a class="btn btn-ghost" href="mailto:hello@naomigabriel.com">hello@naomigabriel.com</a>
+        <p class="small" style="margin-top:10px;">
+          If you message, include: artist name, links (SoundCloud/IG), and whether you want Starter or Pro.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>© <span id="year"></span> Naomi Gabriel</div>
+      <div class="small">Built on GitHub Pages</div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Paste your payment URLs here:
+    const BUY_STARTER_URL = "PASTE_YOUR_PAYMENT_LINK_HERE";
+    const BUY_PRO_URL = "PASTE_YOUR_PAYMENT_LINK_HERE";
+
+    const starterBtn = document.getElementById("buyStarter");
+    const proBtn = document.getElementById("buyPro");
+
+    if (BUY_STARTER_URL && !BUY_STARTER_URL.includes("PASTE_")) starterBtn.href = BUY_STARTER_URL;
+    if (BUY_PRO_URL && !BUY_PRO_URL.includes("PASTE_")) proBtn.href = BUY_PRO_URL;
+  </script>
+</body>
+</html>
