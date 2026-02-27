@@ -1,366 +1,491 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>EPK Websites — by Knayohmi (Naomi Gabriel)</title>
-  <meta name="description" content="Professional EPK websites for DJs & artists. Choose Starter or Pro. Live demos + quick setup." />
+  <title>Knayohmi — EPK</title>
+  <meta name="description" content="Knayohmi (Naomi) — South London DJ. EPK, mixes, bio, press." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Optional: swap to any font you like -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root{
-      --bg:#0b0b0f;
-      --card:#12121a;
-      --text:#f5f5f7;
-      --muted:rgba(245,245,247,.72);
-      --line:rgba(245,245,247,.12);
-      --btn:#f5f5f7;
-      --btnText:#0b0b0f;
-      --ghost:transparent;
-      --radius:18px;
-      --max:1080px;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background:radial-gradient(900px 600px at 20% 0%, rgba(255,255,255,.08), transparent 60%),
-                 radial-gradient(900px 600px at 80% 0%, rgba(255,255,255,.06), transparent 60%),
-                 var(--bg);
-      color:var(--text);
-    }
-    a{color:inherit}
-    .container{max-width:var(--max); margin:0 auto; padding:24px}
-    .topbar{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:20px 0;
-    }
-    .brand{
-      display:flex; gap:12px; align-items:center;
-    }
-    .mark{
-      width:38px; height:38px; border-radius:12px;
-      border:1px solid var(--line);
-      background:linear-gradient(135deg, rgba(245,245,247,.16), rgba(245,245,247,.03));
-    }
-    .brand h1{margin:0; font-size:14px; letter-spacing:.12em}
-    .brand p{margin:2px 0 0; font-size:12px; color:var(--muted)}
-    .nav{display:flex; gap:14px; align-items:center; flex-wrap:wrap}
-    .nav a{font-size:13px; color:var(--muted); text-decoration:none}
-    .nav a:hover{color:var(--text)}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:12px 14px; border-radius:14px; border:1px solid transparent;
-      background:var(--btn); color:var(--btnText);
-      font-weight:600; font-size:14px; text-decoration:none;
-      cursor:pointer;
-      white-space:nowrap;
-    }
-    .btn:hover{transform:translateY(-1px)}
-    .btn:active{transform:translateY(0)}
-    .btn-ghost{
-      background:var(--ghost); color:var(--text);
-      border:1px solid var(--line);
-    }
-    .hero{
-      padding:34px 0 18px;
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:18px;
-      align-items:stretch;
-    }
-    @media (max-width:900px){
-      .hero{grid-template-columns:1fr}
-    }
-    .panel{
-      border:1px solid var(--line);
-      background:rgba(18,18,26,.85);
-      backdrop-filter: blur(10px);
-      border-radius:var(--radius);
-      padding:22px;
-    }
-    .headline{
-      font-size:38px; line-height:1.05; margin:0 0 12px;
-      letter-spacing:-0.02em;
-    }
-    @media (max-width:520px){
-      .headline{font-size:30px}
-    }
-    .lead{color:var(--muted); font-size:15px; line-height:1.6; margin:0 0 16px}
-    .actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
-    .pills{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
-    .pill{
-      border:1px solid var(--line);
-      border-radius:999px;
-      padding:8px 10px;
-      font-size:12px;
-      color:var(--muted);
-    }
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap:16px;
-      margin-top:18px;
-    }
-    @media (max-width:900px){
-      .grid{grid-template-columns:1fr}
-    }
-    .card{
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:18px;
-      background:rgba(18,18,26,.75);
-    }
-    .card h3{margin:0 0 8px; font-size:18px}
-    .price{font-size:26px; font-weight:800; margin:8px 0 10px}
-    .small{font-size:12px; color:var(--muted); line-height:1.5}
-    ul{margin:10px 0 0 18px; color:var(--muted); line-height:1.6}
-    .twoBtns{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
-    .section{
-      margin-top:18px;
-    }
-    .section h2{margin:0 0 8px; font-size:20px}
-    .divider{height:1px; background:var(--line); margin:18px 0}
-    .faq{
-      display:grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap:12px;
-    }
-    @media (max-width:900px){
-      .faq{grid-template-columns:1fr}
-    }
-    .faq .card h4{margin:0 0 6px; font-size:14px}
-    .footer{
-      margin:26px 0 10px;
-      color:var(--muted);
-      font-size:12px;
-      display:flex;
-      justify-content:space-between;
-      gap:12px;
-      flex-wrap:wrap;
-    }
-    .note{
-      border:1px dashed rgba(245,245,247,.22);
-      border-radius:16px;
-      padding:12px 14px;
-      color:var(--muted);
-      font-size:13px;
-      line-height:1.5;
-      background:rgba(18,18,26,.45);
-    }
-    .highlight{color:var(--text)}
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <div class="container">
-    <div class="topbar">
+  <header class="site-header" id="top">
+    <div class="container header-inner">
       <div class="brand">
-        <div class="mark" aria-hidden="true"></div>
+        <!-- Replace with your logo if you want 
+        <div class="brand-mark" aria-hidden="true"></div>-->
         <div>
-          <h1>EPK WEBSITES</h1>
-          <p>By Knayohmi (Naomi Gabriel)</p>
+          <div class="brand-name">KNAYOHMI</div>
+          <div class="brand-tag">South London DJ • House / Tech / Funk / Afro-Latin / Disco </div>
         </div>
       </div>
 
-      <div class="nav">
-        <a href="#packages">Packages</a>
-        <a href="#about">About</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact" class="btn btn-ghost">Contact</a>
-      </div>
+      <nav class="nav">
+        <a href="#bio">Bio</a>
+        <a href="#mixes">Mixes</a>
+        <a href="#press">Press</a>
+        <a href="#contact" class="btn btn-ghost">Book</a>
+      </nav>
     </div>
+  </header>
 
+  <main>
     <!-- HERO -->
-    <div class="hero">
-      <div class="panel">
-        <h2 class="headline">EPK websites that make you look bookable.</h2>
-        <p class="lead">
-          A clean, promoter-friendly page with your bio, mixes, highlights and contact —
-          ready to send in one link. Choose Starter (set up for you) or Pro (done for you).
-        </p>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h2>Keep it moving, keep it grooving.</h2>
+          <p class="lead">
+            Groove-led, soulful and techy sets rooted in funk, disco, and house —
+            built for connection, freedom, and letting go.
+          </p>
 
-        <div class="actions">
-          <a class="btn" href="#packages">See packages</a>
-          <a class="btn btn-ghost" href="demo-starter/" target="_self">Preview Starter demo</a>
-          <a class="btn btn-ghost" href="demo-pro/" target="_self">Preview Pro demo</a>
-        </div>
-
-        <div class="pills">
-          <span class="pill">DJs • Producers • AV artists</span>
-          <span class="pill">Mobile-friendly</span>
-          <span class="pill">Fast to share</span>
-          <span class="pill">No messy Linktree</span>
-        </div>
-      </div>
-
-      <div class="panel">
-        <div class="note">
-          <div class="highlight" style="font-weight:700; margin-bottom:6px;">Quick how it works</div>
-          1) Pick Starter or Pro<br/>
-          2) Pay via Stripe/PayPal<br/>
-          3) You get a live EPK link + next steps<br/>
-          <span class="small">(Starter: you edit content using the guide. Pro: I build it for you.)</span>
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="note">
-          <div class="highlight" style="font-weight:700; margin-bottom:6px;">Already bought Starter?</div>
-          You can upgrade to Pro anytime by paying the difference.
-        </div>
-      </div>
-    </div>
-
-    <!-- PACKAGES -->
-    <div class="section" id="packages">
-      <h2>Packages</h2>
-      <p class="lead" style="margin-top:0">
-        Same professional EPK outcome — two ways to get there.
-      </p>
-
-      <div class="grid">
-        <!-- STARTER -->
-        <div class="card">
-          <h3>EPK Starter</h3>
-          <div class="price">£149</div>
-          <div class="small"><strong>“I set it up. You fill it in.”</strong></div>
-
-          <ul>
-            <li>Your EPK set up and live on GitHub Pages</li>
-            <li>Your own shareable EPK link</li>
-            <li>Step-by-step guide to update text, photos and links</li>
-            <li>Press photos download as a link (zip or folder link)</li>
-          </ul>
-
-          <div class="twoBtns">
-            <a class="btn btn-ghost" href="demo-starter/">Preview Starter demo</a>
-            <!-- Replace href with your payment link -->
-            <a class="btn" href="#" id="buyStarter">Buy Starter</a>
+          <div class="hero-actions">
+            <a class="btn" href="#mixes">Listen to latest mix</a>
+            <a class="btn" href="press-photos/press-photos.zip" download>
+              Download press photos (.zip)
+            </a>
+            <!-- <a class="btn btn-ghost" href="press-pack/Knayohmi-Press-Pack.pdf" download> 
+              Download press pack (PDF)
+            </a>-->
           </div>
 
-          <p class="small" style="margin-top:10px;">
-            Best if you’re happy to follow a guide to add your own content once it’s live.
-          </p>
+          <div class="meta-row">
+            <span class="pill">London, UK</span>
+            <span class="pill">House / Disco / Afro-Latin Grooves</span>
+            <span class="pill">Residencies + bookings</span>
+          </div>
         </div>
 
-        <!-- PRO -->
+        <div class="hero-media" aria-label="Artist image">
+          <!-- Replace with your image -->
+          <img src="assets/hero.jpg" alt="Knayohmi DJing" />
+        </div>
+      </div>
+    </section>
+
+    <!-- BIO -->
+    <section class="section" id="bio">
+      <div class="container">
+        <div class="section-head">
+          <h2>Bio</h2>
+          <p>Choose the version you need. Download as text in one click.</p>
+        </div>
+
         <div class="card">
-          <h3>EPK Pro</h3>
-          <div class="price">£295</div>
-          <div class="small"><strong>“You send the content. I do the rest.”</strong></div>
-
-          <ul>
-            <li>Your EPK set up and live on GitHub Pages</li>
-            <li>I add your bio, photos, mixes and links for you</li>
-            <li>Press photos displayed neatly (thumbnails/gallery)</li>
-            <li>Colour tweaks to match your branding</li>
-            <li>Optional video/showreel section if you have one</li>
-            <li><strong>Includes 30 days of small tweaks</strong> after delivery</li>
-          </ul>
-
-          <div class="twoBtns">
-            <a class="btn btn-ghost" href="demo-pro/">Preview Pro demo</a>
-            <!-- Replace href with your payment link -->
-            <a class="btn" href="#" id="buyPro">Buy Pro</a>
+          <div class="tabs" role="tablist" aria-label="Bio versions">
+            <button class="tab active" role="tab" aria-selected="true" data-bio="short">Short</button>
+            <button class="tab" role="tab" aria-selected="false" data-bio="long">Long</button>
+            <button class="tab" role="tab" aria-selected="false" data-bio="full">Full</button>
           </div>
 
-          <p class="small" style="margin-top:10px;">
-            Best if you want it polished and ready without touching anything technical.
+          <div class="bio-body">
+            <div id="bioText" class="bio-text" aria-live="polite"></div>
+
+            <div class="bio-actions">
+              <button class="btn" id="downloadBioBtn">Download this bio (.txt)</button>
+              <a class="btn btn-ghost" href="bio/bio-full.txt" download>Download full bio (.txt)</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MIXES -->
+    <section class="section" id="mixes">
+      <div class="container">
+        <div class="section-head">
+          <h2>Latest mixes</h2>
+          <!-- <p>Embed players here. Later we can auto-load your newest uploads.</p>-->
+        </div>
+        <div class="embed">
+          <iframe id="sc-player" title="SoundCloud playlist" width="100%" height="450" scrolling="no" frameborder="no"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3Asoundcloud.com/knayohmi/sets/mymixes&start_track=3&auto_play=false&show_user=true">
+          </iframe>
+          <div class="player-controls">
+            <button class="btn" id="prevTrack">⏮ Previous</button>
+            <button class="btn" id="nextTrack">Next ⏭</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- PRESS PHOTOS -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+           <!--  <h2>Press Photos</h2>
+        <p>Sub heading.</p>-->
+        </div>
+        <article class="card">
+          <h3>Press photos</h3>
+          <p class="muted">
+            Download high-res images for flyers, listings, and press.
           </p>
+        
+          <div class="stack">
+            
+
+            <div class="photo-carousel">
+              <button class="carousel-btn" type="button" data-dir="-1">⟵</button>
+              <div class="carousel-viewport">
+                <div class="carousel-track" id="pressPhotoTrack"></div>
+              </div>
+              <button class="carousel-btn" type="button" data-dir="1">⟶</button>
+            </div>
+            <a class="btn" href="press-photos/press-photos.zip" download>
+              Download press photos 
+            </a>
+                      </div>
+                      
+        </article>
+
+      </div>
+  
+    </section>
+
+    <!-- PRESS -->
+    <section class="section" id="press">
+      <div class="container">
+        <div class="section-head">
+          <h2>Press & highlights</h2>
+          <!-- <p>Sub heading.</p>-->
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Residencies</h3>
+            <ul class="list">
+              <li>STICKYJAM Music — South London Tech House Party</li>
+              <li>This Is My Culture — Queer Grassroots Rave</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Selected Appearances</h3>
+            <ul class="list">
+              <li>Pure House LDN — Brixton Jamm
+                - Headlined by Oliver Dollar</li>
+              <li>Rhythm Grooves Christmas Special — The Source Bar, Maidstone
+                - Headlined by Deep Fiktion</li>
+              <li>This Is My Culture — London
+                - Line-up featuring DJ Ritu</li>
+              <li>Party on the Prom — Colwyn Bay Beach
+                - Warm-up set for DJ Singh</li>
+            </ul>
+          </article>
+
+
+
+          <article class="card">
+            <h3>Downloads</h3>
+            <div class="stack">
+              <a class="btn" href="press-photos/press-photos.zip" download>
+                Download press photos (.zip)
+              </a>
+              <a class="btn" href="bio/bio-short.txt" download>Short bio (.txt)</a>
+              <a class="btn" href="bio/bio-long.txt" download>Long bio (.txt)</a>
+              <!-- <a class="btn btn-ghost" href="press-pack/Knayohmi-Press-Pack.pdf" download>Press pack (PDF)</a> -->
+            </div>
+          </article>
         </div>
       </div>
+    </section>
 
-      <div class="divider"></div>
-
-      <!-- WHICH ONE -->
-      <div class="note">
-        <div class="highlight" style="font-weight:700; margin-bottom:6px;">Which one should I choose?</div>
-        Choose <strong>Starter</strong> if you’re happy to follow a simple guide and update your content yourself once everything is live.
-        Choose <strong>Pro</strong> if you’d rather send me your content and receive a finished EPK ready to share.
-      </div>
-
-      <!-- BOUNDARY -->
-      <div class="note" style="margin-top:12px;">
-        <div class="highlight" style="font-weight:700; margin-bottom:6px;">What’s not included</div>
-        Starter is designed to be self-editable using the guide provided. If you’d like me to add content, adjust styling, or make changes for you,
-        that’s covered in Pro or charged as an update.
-      </div>
+ <!-- VIDEO -->
+ <section class="section" id="videos">
+  <div class="container">
+    <div class="section-head">
+      <h2>Videos</h2>
+      <p>Selected clips.</p>
     </div>
 
-    <!-- ABOUT -->
-    <div class="section" id="about">
-      <h2>About</h2>
-      <div class="card">
-        <p class="lead" style="margin:0">
-          I’m Naomi (Knayohmi) — a South London DJ and audiovisual artist. I built these EPKs because I kept seeing talented artists lose bookings
-          with messy links, missing info, or pages that don’t work on mobile. This setup keeps everything a promoter needs in one clean link:
-          who you are, what you sound like, highlights, and how to book you.
-        </p>
-        <p class="small" style="margin:12px 0 0">
-          The aim: <strong>easy for you</strong>, <strong>easy for promoters</strong>, and a page that feels professional even if you’re independent.
-        </p>
-      </div>
-    </div>
+    <article class="card">
+      <div class="yt-carousel">
+        <button class="carousel-btn" type="button" data-dir="-1" aria-label="Previous videos">⟵</button>
 
-    <!-- FAQ -->
-    <div class="section" id="faq">
-      <h2>FAQ</h2>
-      <div class="faq">
-        <div class="card">
-          <h4>Can I use my own domain?</h4>
-          <div class="small">Yes. You buy the domain, I can connect it for <strong>£50</strong> (includes HTTPS).</div>
+        <div class="carousel-viewport">
+          <div class="carousel-track" id="ytTrack"></div>
         </div>
-        <div class="card">
-          <h4>Can I upgrade from Starter to Pro?</h4>
-          <div class="small">Yes — upgrade anytime by paying the difference.</div>
-        </div>
-        <div class="card">
-          <h4>Do I need to know GitHub?</h4>
-          <div class="small">No — Starter and Pro both include GitHub Pages setup.</div>
-        </div>
-        <div class="card">
-          <h4>What counts as “small tweaks” in Pro?</h4>
-          <div class="small">Minor text edits, link swaps, and a photo swap. Bigger changes are treated as an update.</div>
-        </div>
-      </div>
-    </div>
 
-    <!-- CONTACT -->
-    <div class="section" id="contact">
-      <h2>Contact</h2>
-      <div class="card">
-        <p class="lead" style="margin:0 0 10px;">
-          Questions or want to book a Pro build? Email me:
-        </p>
-        <a class="btn btn-ghost" href="mailto:hello@naomigabriel.com">hello@naomigabriel.com</a>
-        <p class="small" style="margin-top:10px;">
-          If you message, include: artist name, links (SoundCloud/IG), and whether you want Starter or Pro.
-        </p>
+        <button class="carousel-btn" type="button" data-dir="1" aria-label="Next videos">⟶</button>
       </div>
-    </div>
-
-    <div class="footer">
-      <div>© <span id="year"></span> Naomi Gabriel</div>
-      <div class="small">Built on GitHub Pages</div>
-    </div>
+    </article>
   </div>
+</section>
 
+<!-- Modal -->
+<div class="yt-modal" id="ytModal" aria-hidden="true">
+  <div class="yt-modal-inner" role="dialog" aria-label="Video player">
+    <button class="yt-close" id="ytClose" aria-label="Close">✕</button>
+    <div class="video-embed" id="ytPlayerWrap"></div>
+  </div>
+</div>
+
+
+    
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2>Booking</h2>
+          <p>Give me a message - I promise I won't bite!.</p>
+        </div>
+
+        <div class="card contact-card">
+          <div>
+            <div class="label">Email</div>
+            <a="hello@naomigabriel.com">hello@naomigabriel.com</a>
+          </div>
+
+          <div>
+            <div class="label">Social</div>
+            <div class="stack">
+              <a href="#" target="_blank" rel="noreferrer">Instagram</a>
+              <a href="#" target="_blank" rel="noreferrer">SoundCloud</a>
+              <!-- <a href="#" target="_blank" rel="noreferrer">RA</a>-->
+            </div>
+          </div>
+
+          <div class="right">
+            <a class="btn" href="#top">Back to top</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="muted">© <span id="year"></span> Knayohmi</div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script src="https://w.soundcloud.com/player/api.js"></script>
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Paste your payment URLs here:
-    const BUY_STARTER_URL = "PASTE_YOUR_PAYMENT_LINK_HERE";
-    const BUY_PRO_URL = "PASTE_YOUR_PAYMENT_LINK_HERE";
-
-    const starterBtn = document.getElementById("buyStarter");
-    const proBtn = document.getElementById("buyPro");
-
-    if (BUY_STARTER_URL && !BUY_STARTER_URL.includes("PASTE_")) starterBtn.href = BUY_STARTER_URL;
-    if (BUY_PRO_URL && !BUY_PRO_URL.includes("PASTE_")) proBtn.href = BUY_PRO_URL;
+    // -------------------------
+    // SoundCloud controls
+    // -------------------------
+    const scIframe = document.getElementById('sc-player');
+    if (scIframe && window.SC && SC.Widget) {
+      const widget = SC.Widget(scIframe);
+  
+      const prevTrackBtn = document.getElementById("prevTrack");
+      const nextTrackBtn = document.getElementById("nextTrack");
+  
+      prevTrackBtn?.addEventListener("click", () => widget.prev());
+      nextTrackBtn?.addEventListener("click", () => widget.next());
+    }
+  
+    // -------------------------
+    // Photo carousel (requires PRESS_PHOTOS array)
+    // -------------------------
+    (function initPressPhotoCarousel() {
+      const track = document.getElementById("pressPhotoTrack");
+      if (!track) return;
+  
+      // Build items first (from PRESS_PHOTOS)
+      if (track && typeof PRESS_PHOTOS !== "undefined") {
+        PRESS_PHOTOS.forEach(src => {
+          const link = document.createElement("a");
+          link.className = "carousel-item";
+          link.href = src;
+          link.download = "";
+  
+          const img = document.createElement("img");
+          img.src = src;
+          img.alt = "Press photo";
+  
+          link.appendChild(img);
+          track.appendChild(link);
+        });
+      }
+  
+      const carousel = track.closest(".photo-carousel");
+      if (!carousel) return;
+  
+      const btnPrev = carousel.querySelector('.carousel-btn[data-dir="-1"]');
+      const btnNext = carousel.querySelector('.carousel-btn[data-dir="1"]');
+      const viewport = carousel.querySelector(".carousel-viewport");
+  
+      if (!btnPrev || !btnNext || !viewport) return;
+  
+      let index = 0;
+  
+      function itemsPerView() {
+        const w = window.innerWidth;
+        if (w <= 520) return 1;
+        if (w <= 820) return 2;
+        return 3;
+      }
+  
+      function maxIndex() {
+        return Math.max(0, track.children.length - itemsPerView());
+      }
+  
+      function itemStepPx() {
+        const first = track.querySelector(".carousel-item");
+        if (!first) return 0;
+        const itemWidth = first.getBoundingClientRect().width;
+        const gap = parseFloat(getComputedStyle(track).gap || "0");
+        return itemWidth + gap;
+      }
+  
+      function update() {
+        const max = maxIndex();
+        index = Math.min(Math.max(index, 0), max);
+  
+        track.style.transform = `translateX(${-index * itemStepPx()}px)`;
+        btnPrev.disabled = (index === 0);
+        btnNext.disabled = (index === max);
+      }
+  
+      btnPrev.addEventListener("click", () => { index--; update(); });
+      btnNext.addEventListener("click", () => { index++; update(); });
+      window.addEventListener("resize", update);
+  
+      // Re-run layout as images load
+      track.querySelectorAll("img").forEach(img => {
+        if (img.complete) return;
+        img.addEventListener("load", update, { once: true });
+      });
+  
+      // Shift + wheel to scroll
+      viewport.addEventListener("wheel", (e) => {
+        if (!e.shiftKey) return;
+        e.preventDefault();
+        index += (e.deltaY > 0 ? 1 : -1);
+        update();
+      }, { passive: false });
+  
+      update();
+    })();
+  
+    // -------------------------
+    // YouTube carousel + modal
+    // -------------------------
+    (function initYouTubeCarousel() {
+      const track = document.getElementById("ytTrack");
+      if (!track) return;
+  
+      const YT_VIDEOS = [
+        { id: "5llvu4fg8oE", title: "Live clip — Venue name" },
+        { id: "heJkNiXQSfM", title: "Showreel — 2026" },
+        { id: "heJkNiXQSfM", title: "Festival set — highlights" },
+        { id: "heJkNiXQSfM", title: "AV performance — excerpt" }
+      ];
+  
+      // Build thumbs
+      track.innerHTML = "";
+      YT_VIDEOS.forEach(v => {
+        const a = document.createElement("a");
+        a.className = "yt-thumb";
+        a.href = `https://youtu.be/${v.id}`;
+        a.dataset.ytid = v.id;
+  
+        a.innerHTML = `
+          <img loading="lazy" decoding="async"
+               src="https://i.ytimg.com/vi/${v.id}/hqdefault.jpg"
+               alt="${v.title}">
+          <div class="cap">${v.title}</div>
+        `;
+        track.appendChild(a);
+      });
+  
+      const carousel = track.closest(".yt-carousel");
+      if (!carousel) return;
+  
+      const btnPrev = carousel.querySelector('.carousel-btn[data-dir="-1"]');
+      const btnNext = carousel.querySelector('.carousel-btn[data-dir="1"]');
+      const viewport = carousel.querySelector(".carousel-viewport");
+      if (!btnPrev || !btnNext || !viewport) return;
+  
+      let index = 0;
+  
+      function itemsPerView() {
+        const w = window.innerWidth;
+        if (w <= 520) return 1;
+        if (w <= 820) return 2;
+        return 3;
+      }
+      function maxIndex() { return Math.max(0, track.children.length - itemsPerView()); }
+      function stepPx() {
+        const first = track.querySelector(".yt-thumb");
+        if (!first) return 0;
+        const gap = parseFloat(getComputedStyle(track).gap || "0");
+        return first.getBoundingClientRect().width + gap;
+      }
+      function update() {
+        const max = maxIndex();
+        index = Math.min(Math.max(index, 0), max);
+        track.style.transform = `translateX(${-index * stepPx()}px)`;
+        btnPrev.disabled = (index === 0);
+        btnNext.disabled = (index === max);
+      }
+  
+      btnPrev.addEventListener("click", () => { index--; update(); });
+      btnNext.addEventListener("click", () => { index++; update(); });
+      window.addEventListener("resize", update);
+  
+      // Modal
+      const modal = document.getElementById("ytModal");
+      const closeBtn = document.getElementById("ytClose");
+      const wrap = document.getElementById("ytPlayerWrap");
+  
+      if (modal && closeBtn && wrap) {
+        function openModal(id) {
+          wrap.innerHTML = `
+            <iframe
+              src="https://www.youtube.com/embed/${id}?autoplay=1"
+              title="YouTube video player"
+              frameborder="0"
+              allow="autoplay; encrypted-media; picture-in-picture"
+              allowfullscreen></iframe>
+          `;
+          modal.classList.add("open");
+          modal.setAttribute("aria-hidden", "false");
+        }
+  
+        function closeModal() {
+          modal.classList.remove("open");
+          modal.setAttribute("aria-hidden", "true");
+          wrap.innerHTML = "";
+        }
+  
+        track.addEventListener("click", (e) => {
+          const a = e.target.closest("a.yt-thumb");
+          if (!a) return;
+          e.preventDefault();
+          openModal(a.dataset.ytid);
+        });
+  
+        closeBtn.addEventListener("click", closeModal);
+        modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
+        document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
+      }
+  
+      // Shift + wheel to scroll
+      viewport.addEventListener("wheel", (e) => {
+        if (!e.shiftKey) return;
+        e.preventDefault();
+        index += (e.deltaY > 0 ? 1 : -1);
+        update();
+      }, { passive: false });
+  
+      update();
+    })();
   </script>
+  
+
 </body>
+
 </html>
