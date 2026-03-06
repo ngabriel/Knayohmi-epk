@@ -164,34 +164,24 @@
     </section>
 
  <!-- VIDEO -->
-    <section class="section" id="video">
-      <div class="container">
-        <div class="section-head">
-          <h2>Video</h2>
-          <p>Live clips and showreel.</p>
-        </div>
-    
-        <article class="card">
-          <div class="video-embed">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/blWfmZjO6Ag"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
-          </div>
-    
-          <div class="stack" style="margin-top:12px;">
-            <a class="btn btn-ghost" href="https://youtu.be/blWfmZjO6Ag" target="_blank" rel="noreferrer">
-              Watch on YouTube
-            </a>
-          </div>
-        </article>
-      </div>
-    </section>
+<section class="section" id="video">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="video-title">Video</h2>
+      <p id="video-help">Live clips and showreel.</p>
+    </div>
+
+    <div id="video-content"></div>
+  </div>
+</section>
+
+<!-- Video Modal for multiple videos -->
+<div class="yt-modal" id="ytModal" aria-hidden="true">
+  <div class="yt-modal-inner" role="dialog" aria-label="Video player">
+    <button class="yt-close" id="ytClose" aria-label="Close">✕</button>
+    <div class="video-embed" id="ytPlayerWrap"></div>
+  </div>
+</div>
 
     
     <!-- CONTACT -->
@@ -238,15 +228,19 @@
     const widget = SC.Widget(iframe);
 
     const prevBtn = document.getElementById("prevTrack");
-    const nextBtn = document.getElementById("nextTrack");
+const nextBtn = document.getElementById("nextTrack");
 
-    prevBtn.addEventListener("click", () => {
-      widget.prev();
-    });
+if (prevBtn) {
+  prevBtn.addEventListener("click", () => {
+    widget.prev();
+  });
+}
 
-    nextBtn.addEventListener("click", () => {
-      widget.next();
-    });
+if (nextBtn) {
+  nextBtn.addEventListener("click", () => {
+    widget.next();
+  });
+}
 
     //photo carousel
     const track = document.getElementById("pressPhotoTrack");

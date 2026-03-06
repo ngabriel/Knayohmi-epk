@@ -34,7 +34,30 @@
   },
   "video": {
     "title": "Video",
-    "helpText": "Live clips and showreel."
+    "helpText": "Live clips and showreel.",
+    "type": "multiple",
+    "singleVideo": {
+      "id": "blWfmZjO6Ag",
+      "title": "Live set"
+    },
+    "videos": [
+      {
+        "id": "5llvu4fg8oE",
+        "title": "Live clip — Venue name"
+      },
+      {
+        "id": "heJkNiXQSfM",
+        "title": "Showreel — 2026"
+      },
+      {
+        "id": "5llvu4fg8oE",
+        "title": "Live clip — Venue name"
+      },
+      {
+        "id": "heJkNiXQSfM",
+        "title": "Showreel — 2026"
+      }
+    ]
   },
   "contact": {
     "title": "Booking",
