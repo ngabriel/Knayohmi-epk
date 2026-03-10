@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EPK Setup Guide</title>
+</head>
+<body>
+
+  <!-- MOBILE CONTENTS -->
+  <details class="mobile-top">
+    <summary>Contents</summary>
+
+    <nav class="mobile-menu">
+      <details class="mobile-group" open>
+        <summary>Welcome</summary>
+        <div class="mobile-submenu">
+          <a href="#welcome">Welcome</a>
+          <a href="#overview">What this is</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="#github-explained">What is GitHub?</a>
+        </div>
+      </details>
+
+      <details class="mobile-group">
+        <summary>Setting up your EPK</summary>
+        <div class="mobile-submenu">
+          <a href="#github">Setting up GitHub</a>
+          <a href="#publish">Publishing your site</a>
+        </div>
+      </details>
+
+      <details class="mobile-group">
+        <summary>Customising your content</summary>
+        <div class="mobile-submenu">
+          <a href="#example-dj">Example DJ</a>
+          <a href="#data-json">Understanding data.json</a>
+          <a href="#technical-json">The technical part</a>
+          <a href="#json-structure">How JSON works</a>
+          <a href="#first-edit">Let’s make our first edit</a>
+          <a href="#header-edit">Editing your header</a>
+          <a href="#hero-edit">Hero section</a>
+          <a href="#bio-edit">Bio section</a>
+          <a href="#press-edit">Press section</a>
+          <a href="#video-edit">Video section</a>
+          <a href="#contact-edit">Contact section</a>
+          <a href="#tips">Important tips</a>
+          <a href="#json-example">Example JSON structure</a>
+        </div>
+      </details>
+
+      <details class="mobile-group">
+        <summary>Extra help</summary>
+        <div class="mobile-submenu">
+          <a href="#faq">FAQ</a>
+        </div>
+      </details>
+    </nav>
+  </details>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <h1>EPK Setup Guide</h1>
+        <p>A free-hosted instruction site for your self-setup product.</p>
+      </div>
+
+      <div class="nav-title">Contents</div>
+
+      <nav class="toc" id="toc">
+        <div class="toc-group">
+          <div class="toc-heading">Welcome</div>
+          <a href="#welcome">Welcome</a>
+          <a href="#overview">What this is</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="#github-explained">What is GitHub?</a>
+        </div>
+
+        <div class="toc-group">
+          <div class="toc-heading">Setting up your EPK</div>
+          <a href="#github">Setting up GitHub</a>
+          <a href="#publish">Publishing your site</a>
+        </div>
+
+        <div class="toc-group">
+          <div class="toc-heading">Customising your content</div>
+          <a href="#example-dj">Example DJ</a>
+          <a href="#data-json">Understanding data.json</a>
+          <a href="#technical-json">The technical part</a>
+          <a href="#json-structure">How JSON works</a>
+          <a href="#first-edit">Let’s make our first edit</a>
+          <a href="#header-edit">Editing your header</a>
+          <a href="#hero-edit">Hero section</a>
+          <a href="#bio-edit">Bio section</a>
+          <a href="#press-edit">Press section</a>
+          <a href="#video-edit">Video section</a>
+          <a href="#contact-edit">Contact section</a>
+          <a href="#tips">Important tips</a>
+          <a href="#json-example">Example JSON structure</a>
+        </div>
+
+        <div class="toc-group">
+          <div class="toc-heading">Extra help</div>
+          <a href="#faq">FAQ</a>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="content">
+
+      <div class="hero">
+        <div class="eyebrow">Start here</div>
+        <h2>Welcome to your EPK website</h2>
+        <p>
+          Well done on your purchase. This is a smart choice because you will fully own your EPK
+          and all of the files behind it. This guide will walk you through getting it online
+          and turning the template into your own professional DJ EPK.
+        </p>
+      </div>
+
+      <section id="welcome" class="card">
+        <h3>Welcome</h3>
+        <p>
+          Congratulations on your purchase. Your EPK is fully yours.
+          There are no subscriptions and you keep the full website code and content.
+        </p>
+        <p>
+          You do not need to know how to code to use this product.
+          The website structure is already built — you simply replace the demo content
+          with your own information.
+        </p>
+      </section>
+
+      <section id="overview" class="card">
+        <h3>What this is</h3>
+        <p>
+          Your EPK is a website designed to give promoters, bookers and venues
+          one simple place to find your DJ information.
+        </p>
+
+        <div class="grid">
+          <div class="mini-card">
+            <h4>What it includes</h4>
+            <p class="muted">
+              Bio, mixes, press highlights, video, photos and booking contact.
+            </p>
+          </div>
+
+          <div class="mini-card">
+            <h4>Why it matters</h4>
+            <p class="muted">
+              A professional EPK makes it easier for promoters to understand your style
+              and book you for events.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="card">
+        <h3>How it works</h3>
+        <p>Your EPK works using three simple parts:</p>
+
+        <div class="grid">
+          <div class="mini-card">
+            <h4>1. Website structure</h4>
+            <p class="muted">
+              This controls the design and layout of your EPK. You own this code
+              but you don't need to edit it.
+            </p>
+          </div>
+
+          <div class="mini-card">
+            <h4>2. Your content</h4>
+            <p class="muted">
+              Your DJ name, bio, links and videos are stored in one file called
+              <code>data.json</code>.
+            </p>
+          </div>
+
+          <div class="mini-card">
+            <h4>3. Hosting</h4>
+            <p class="muted">
+              Hosting simply means putting your website online so people can visit it.
+              We will use GitHub Pages because it is free and reliable.
+            </p>
+          </div>
+
+          <div class="mini-card">
+            <h4>Your website address</h4>
+            <p class="muted">
+              When first published your site will have a GitHub address.
+            </p>
+          </div>
+        </div>
+
+        <pre><code>yourusername.github.io/your-epk</code></pre>
+        <p>You can also connect your own domain later for something more professional:</p>
+        <pre><code>www.yourdjname.com/epk</code></pre>
+      </section>
+
+      <section id="github-explained" class="card">
+        <h3>What is GitHub?</h3>
+        <p>GitHub is a platform where developers store and manage projects.</p>
+        <p>In this case GitHub will store your EPK website and publish it online.</p>
+        <p>Think of GitHub as the place where your website lives and where you update your content.</p>
+        <p>We will use GitHub for two things:</p>
+        <ul>
+          <li>storing the website files</li>
+          <li>publishing the website online</li>
+        </ul>
+      </section>
+
+      <section id="github" class="card">
+        <h3>Setting up GitHub</h3>
+        <p><strong>Video walkthrough:</strong></p>
+        <p class="muted">[Add how-to video link here]</p>
+        <p>I recommend using Google Chrome for setup.</p>
+
+        <ol>
+          <li>Create a free account on GitHub</li>
+          <li>Sign in to your account</li>
+          <li>Go to the EPK template repository</li>
+          <li>Click <strong>Use this template</strong></li>
+          <li>Click <strong>Create new repository</strong></li>
+        </ol>
+
+        <p>This creates your own copy of the website inside your GitHub account.</p>
+        <p>Inside the repository you will see all the files that make up your website.</p>
+        <p><strong>Important:</strong> the only file you normally need to edit is <code>data.json</code>.</p>
+      </section>
+
+      <section id="publish" class="card">
+        <h3>Publishing your site</h3>
+        <p><strong>Video walkthrough:</strong></p>
+        <p class="muted">[Add how-to video link here]</p>
+
+        <p>
+          Before editing the content we will publish the website so you can see your
+          changes live.
+        </p>
+
+        <ol>
+          <li>Open your repository</li>
+          <li>Click <strong>Settings</strong></li>
+          <li>Click <strong>Pages</strong></li>
+          <li>Set Source to <strong>Deploy from branch</strong></li>
+          <li>Set Branch to <strong>main</strong></li>
+          <li>Set folder to <strong>/root</strong></li>
+          <li>Click <strong>Save</strong></li>
+        </ol>
+
+        <p>After a few minutes your website link will appear.</p>
+        <p>Refresh the page if it does not appear immediately.</p>
+      </section>
+
+      <section id="example-dj" class="card">
+        <h3>The example DJ profile</h3>
+        <p>Inside the template you will find a demo DJ profile.</p>
+        <p>This profile simply shows how the EPK works before you replace it with your own information.</p>
+        <p>In this guide we will edit that demo profile step-by-step and turn it into your personal EPK.</p>
+
+        <p><strong>Example profile:</strong></p>
+        <ul>
+          <li>DJ Nova Pulse</li>
+          <li>Genre: Tech House / Club</li>
+          <li>Location: London</li>
+        </ul>
+      </section>
+
+      <section id="data-json" class="card">
+        <h3>Understanding <code>data.json</code></h3>
+        <p><strong>This is where all the magic happens.</strong></p>
+        <p>The file <code>data.json</code> controls all the content on your EPK website.</p>
+        <p>Instead of editing the website code you simply edit the information inside this file.</p>
+        <p>The website then reads this file and displays the content on your page.</p>
+
+        <p><strong>Video walkthrough:</strong></p>
+        <p class="muted">[Add how-to video link here]</p>
+      </section>
+
+      <section id="technical-json" class="card">
+        <h3>The technical part</h3>
+        <p>
+          This is the most technical step in the process — but don't worry,
+          once you understand it the process is very simple.
+        </p>
+        <p>The <code>data.json</code> file is written in a format called JSON.</p>
+        <p>JSON is structured using symbols like:</p>
+
+        <pre><code>{
+}
+"
+:
+,</code></pre>
+
+        <p>These symbols are important because they define the structure of the file.</p>
+        <p>When editing the file we must be careful not to remove them.</p>
+
+        <ul>
+          <li>Do not remove brackets { }</li>
+          <li>Do not remove quotation marks "</li>
+          <li>Do not remove commas ,</li>
+        </ul>
+
+        <p>If these are removed the file will break and the website will not update correctly.</p>
+      </section>
+
+      <section id="json-structure" class="card">
+        <h3>How JSON works</h3>
+        <p>JSON is written in pairs:</p>
+
+        <pre><code>keyword : content</code></pre>
+
+        <p>Example:</p>
+
+        <pre><code>"artistName": "KNAYOHMI"</code></pre>
+
+        <p>The first part is the keyword. The second part is the content.</p>
+        <p>You only edit the content. The keywords must stay the same because the website uses them to find the correct information.</p>
+      </section>
+
+      <section id="first-edit" class="card">
+        <h3>Let's make our first edit</h3>
+        <p>Now we will start editing the first section of the EPK.</p>
+        <p>The header section controls:</p>
+        <ul>
+          <li>your DJ name</li>
+          <li>your tagline</li>
+        </ul>
+        <p>This will be the first change that transforms the demo profile into your own EPK.</p>
+      </section>
+
+      <section id="header-edit" class="card">
+        <h3>Editing your header</h3>
+        <p>The header contains your DJ name and tagline.</p>
+
+        <pre><code>"header": {
+  "artistName": "KNAYOHMI",
+  "artistTag": "South London DJ • House / Tech / Funk / Afro-Latin / Disco"
+}</code></pre>
+
+        <h4>artistName</h4>
+        <p>Your DJ name.</p>
+        <p>Example: <strong>DJ Luna</strong></p>
+
+        <h4>artistTag</h4>
+        <p>A short description of your style.</p>
+
+        <p>Examples:</p>
+        <ul>
+          <li>London DJ • House / Disco</li>
+          <li>Berlin DJ • Techno / Minimal</li>
+          <li>Ibiza DJ • House / Tech House</li>
+        </ul>
+
+        <p>Keep this short and clear.</p>
+      </section>
+
+      <section id="hero-edit" class="card">
+        <h3>Hero section</h3>
+        <p>The hero section is the main introduction text at the top of your EPK.</p>
+
+        <pre><code>"hero": {
+  "title": "Keep it moving, keep it grooving.",
+  "lead": "Groove-led, soulful and techy sets rooted in funk, disco, and house — built for connection, freedom, and letting go.",
+  "pills": ["London, UK", "House / Disco / Afro-Latin Grooves", "Residencies + bookings"]
+}</code></pre>
+
+        <h4>title</h4>
+        <p>A short statement describing your music.</p>
+        <p>Example: <em>Dancefloor energy from start to finish.</em></p>
+
+        <h4>lead</h4>
+        <p>A short paragraph describing your DJ style.</p>
+
+        <h4>pills</h4>
+        <p>Small highlight tags displayed under your introduction.</p>
+
+        <ul>
+          <li>London, UK</li>
+          <li>House / Tech House</li>
+          <li>International bookings</li>
+        </ul>
+
+        <p>You can add or remove items inside the list.</p>
+      </section>
+
+      <section id="bio-edit" class="card">
+        <h3>Bio section</h3>
+        <p>The bio section allows you to store multiple versions of your biography.</p>
+        <p>This is useful because different promoters request different lengths.</p>
+
+        <pre><code>"bio": {
+  "title": "Bio",
+  "helpText": "Choose the version you need. Download as text in one click.",
+  "versions": {
+    "short": "Short bio text goes here...",
+    "long": "Longer bio text goes here...",
+    "full": "Full professional bio text goes here..."
+  }
+}</code></pre>
+
+        <p><strong>Short bio</strong> – 1–2 sentences for quick introductions.</p>
+        <p><strong>Long bio</strong> – one paragraph.</p>
+        <p><strong>Full bio</strong> – longer biography for press or festivals.</p>
+      </section>
+
+      <section id="press-edit" class="card">
+        <h3>Press section</h3>
+        <p>This section highlights important events, residencies and appearances.</p>
+
+        <pre><code>"press": {
+  "sectionTitle": "Press & highlights",
+  "residencyTitle": "Residencies",
+  "residencies": [
+    "STICKYJAM Music — South London Tech House Party"
+  ]
+}</code></pre>
+
+        <h4>Residencies</h4>
+        <p>Clubs or events where you regularly perform.</p>
+
+        <h4>Appearances</h4>
+        <p>Important events or gigs you have played.</p>
+      </section>
+
+      <section id="video-edit" class="card">
+        <h3>Video section</h3>
+        <p>This section introduces your DJ set video or showreel.</p>
+
+        <pre><code>"video": {
+  "title": "Video",
+  "helpText": "Live clips and showreel."
+}</code></pre>
+
+        <p>Your video will normally be embedded from YouTube or Vimeo.</p>
+
+        <p>Recommended content:</p>
+        <ul>
+          <li>DJ set recording</li>
+          <li>Showreel</li>
+          <li>Live performance clip</li>
+        </ul>
+      </section>
+
+      <section id="contact-edit" class="card">
+        <h3>Contact section</h3>
+        <p>The contact section allows promoters to book you quickly.</p>
+
+        <pre><code>"contact": {
+  "title": "Booking",
+  "helpText": "Give me a message - I promise I won't bite!",
+  "email": "hello@naomigabriel.com",
+  "instagramUrl": "https://instagram.com/knayohmi",
+  "soundcloudUrl": "https://soundcloud.com/knayohmi"
+}</code></pre>
+
+        <p><strong>Email</strong> – your main booking email.</p>
+        <p><strong>Instagram</strong> – your main social profile.</p>
+        <p><strong>SoundCloud</strong> – your mixes or music.</p>
+      </section>
+
+      <section id="tips" class="card">
+        <h3>Important tips</h3>
+        <ul>
+          <li>Only change text between quotation marks</li>
+          <li>Do not remove commas</li>
+          <li>Do not remove brackets</li>
+          <li>Save the file before refreshing your website</li>
+        </ul>
+
+        <p>If something breaks, it is usually caused by a missing comma or quotation mark.</p>
+      </section>
+
+      <section id="json-example" class="card">
+        <h3>Example JSON structure</h3>
+
+        <pre><code>{
+  "header": { ... },
+  "hero": { ... },
+  "bio": { ... },
+  "press": { ... },
+  "video": { ... },
+  "contact": { ... }
+}</code></pre>
+
+        <p>Each section corresponds to a part of your EPK page.</p>
+
+        <p><strong>Future improvement:</strong> you can also allow multiple videos using a structure like this:</p>
+
+        <pre><code>"videos": [
+  "youtube-link",
+  "youtube-link"
+]</code></pre>
+
+        <p>This allows DJs to add more videos later without changing the code.</p>
+      </section>
+
+      <section id="faq" class="card">
+        <h3>FAQ</h3>
+        <p><strong>Can I use my own domain?</strong><br>Yes. You can connect your own domain later. You only pay for the domain name itself.</p>
+        <p><strong>Do I need to edit code?</strong><br>No. Most users only need to update content in <code>data.json</code>.</p>
+        <p><strong>Can I host it somewhere else?</strong><br>Yes. Because you own the files, you can host your EPK anywhere that supports static websites.</p>
+      </section>
+
+      <p class="footer-note">EPKLab setup guide · Free hosting via GitHub Pages · Built to be simple</p>
+    </main>
+  </div>
+
+  <script>
+    const links = Array.from(document.querySelectorAll('#toc a'));
+    const sections = links
+      .map(link => document.querySelector(link.getAttribute('href')))
+      .filter(Boolean);
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const id = `#${entry.target.id}`;
+        links.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === id);
+        });
+      });
+    }, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
+
+    sections.forEach(section => observer.observe(section));
+
+    document.querySelectorAll('.mobile-submenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        const top = document.querySelector('.mobile-top');
+        if (top) top.removeAttribute('open');
+
+        document.querySelectorAll('.mobile-group').forEach(group => {
+          group.removeAttribute('open');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
