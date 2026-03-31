@@ -38,24 +38,20 @@
     "type": "single",
     "singleVideo": {
       "id": "blWfmZjO6Ag",
-      "title": "AV Live set"
+      "title": "Valentines rave"
     },
     "videos": [
       {
+        "id": "blWfmZjO6Ag",
+        "title": "Valentines rave"
+      },
+      {
+        "id": "jrarOlVdtsw",
+        "title": "Carnaval Del Pueblo"
+      },
+      {
         "id": "5llvu4fg8oE",
-        "title": "Live clip — Venue name"
-      },
-      {
-        "id": "heJkNiXQSfM",
-        "title": "Showreel — 2026"
-      },
-      {
-        "id": "5llvu4fg8oE",
-        "title": "Live clip — Venue name"
-      },
-      {
-        "id": "heJkNiXQSfM",
-        "title": "Showreel — 2026"
+        "title": "Live AV Performance"
       }
     ]
   },
