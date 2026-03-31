@@ -35,7 +35,7 @@
   "video": {
     "title": "Video",
     "helpText": "Live clips and showreel.",
-    "type": "single",
+    "type": "multiple",
     "singleVideo": {
       "id": "blWfmZjO6Ag",
       "title": "Valentines rave"
