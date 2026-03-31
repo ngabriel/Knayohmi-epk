@@ -35,10 +35,10 @@
   "video": {
     "title": "Video",
     "helpText": "Live clips and showreel.",
-    "type": "multiple",
+    "type": "single",
     "singleVideo": {
       "id": "blWfmZjO6Ag",
-      "title": "Live set"
+      "title": "AV Live set"
     },
     "videos": [
       {
